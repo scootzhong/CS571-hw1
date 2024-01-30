@@ -12,21 +12,21 @@ All `.html`, `.css`, and `.js` files are located in the `badger-mart` folder. Yo
 
 The `about-us.html` page is currently empty. Make a *plausible-looking* About Us page using text generated from [lorem ipsum](https://www.lipsum.com/) (be sure to cite your source with a comment!). On this page, you should use multiple heading levels, **bold** and *italic* text (remember to use the locale-appropriate tags!), and insert the image from `assets/bagel.png`. The image must be accessible, so be sure to include an `alt` tag describing what it is! There are no other strict requirements for this section, see the screenshot below for an example.
 
-![]()
+![](_figures/step1.png)
 
 ### 2. Button Styling
 
 All of our buttons look the same! However, if you look at the `.html` files, we do distinguish between CSS classes `primary-button` and `secondary-button`. Using `styles.css`, give `primary-button` and `secondary-button` three different CSS attributes (e.g. change the `background-color`, `border`, `padding`, or any other CSS attributes of each). Again, there are no other strict requirements for this section, see the screenshot below for an example.
 
-![]()
+![](_figures/step2.png)
 
 ### 3. Jobs Page
 
-There is a webpage, `jobs.html`, which isn't being shown in our navigation bar. Add a "Jobs" link to each navigation bar in Badger Mart. You will need to edit all of the other `.html` files in order to do this.
+There is a webpage, `jobs.html`, which isn't being shown in our navigation bar. Add a "Jobs" link to each navigation bar in Badger Mart between the "Order" and "Contact" links. You will need to edit all of the other `.html` files in order to do this.
 
 Furthermore, add the `primary` styling to "Apply" button. For now, the button does not need to do anything; we will re-visit this in Step 8.
 
-![]()
+![](_figures/step3.png)
 
 ### 4. Getting State Tax
 
@@ -36,7 +36,7 @@ When this function is properly implemented, you can get the sales tax for a stat
 
 **Hint:** Use the `SALES_TAX` object to get the tax rate for a particular state.
 
-![]()
+![](_figures/step4.png)
 
 ### 5. Calculating Subtotal.
 
@@ -57,7 +57,7 @@ const quantity = parseInt(document.getElementById("ITEMNAME-quantity").value);
 const price = parseFloat(document.getElementById("ITEMNAME-price").innerText);
 ```
 
-![]()
+![](_figures/step5.png)
 
 ### 6. Calculating Sales Tax
 
@@ -69,13 +69,13 @@ When this function is properly implemented, you can calculate your sales tax by 
 
 For example, when ordering two apples, three bagels, and one coconut ($5.50), the Alabama (AL) sales tax should be $0.22 while the Florida (FL) sales tax should be $0.33.
 
-![]()
+![](_figures/step6.png)
 
 ### 7. Completing Order
 
 In `order.js` add an event listener that waits for the "Checkout" button to be pressed. When the checkout button is pressed, alert the user what their total bill is (using `calculateSubtotal` and `calculateSalesTax`).
 
-![]()
+![](_figures/step7.png)
 
 ### 8. Applying for a Job
 
@@ -87,7 +87,7 @@ When this function is properly implemented, you should alert the user "Thank you
 
 You may *not* hardcode the names of the jobs! Hardcoding will cause you to lose points.
 
-![]()
+![](_figures/step8.png)
 
 ### 9. Featured Item
 That's all the code you will need to write for HTML, JS, and CSS! This last step is to be sure that you have a working Badger ID.
@@ -100,7 +100,7 @@ Today's sale is Molasses for $3.99, which can only be asked for at the service d
 
 ... there is nothing further you need to do! Note the special rotates daily, so you may see Sunflower Seeds, Molasses, Tuna, Weetabix, Thyme, Fries (Frozen), or Salmon depending on the day!
 
-![]()
+![](_figures/step9.png)
 
 If you do **not** see today's feature, you will need to search your email for `CS571 - New Badger ID` sent by `ctnelson2@wisc.edu`. [Enter this Badger ID here.](https://www.cs571.org/auth/login) After submitting, you may need to **close your browser and wait for at least a minute** before accessing Badger Mart again.
 
