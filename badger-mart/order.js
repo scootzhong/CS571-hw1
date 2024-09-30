@@ -59,15 +59,41 @@ function roundMoney(num) {
 }
 
 function calculateSubtotal() {
-	return 0.00; // TODO calculateSubtotal
+	let total = 0;
+
+	// 获取表格元素
+	let table = document.getElementById("item-table");
+
+	// 遍历表格的所有行（从第二行开始），将第二列和第三列相乘并添加到total中
+	for (let i = 1; i < table.rows.length; i++) {
+		// 获取行元素
+		let row = table.rows[i];
+
+		// 获取Price和Quantity Needed并转换为数字
+		let price = parseFloat(row.cells[1].innerHTML);
+		let quantity = parseFloat(row.cells[2].querySelector('input').value);
+
+		// 仅当 price 和 quantity 都是有效数字时才进行累加
+		if (!isNaN(price) && !isNaN(quantity)) {
+			total += price * quantity;
+		}
+	}
+
+	return total;
 }
 
 function calculateSalesTax() {
-	return 0.00; // TODO calculateSalesTax
+	// 获取州选项
+	let state = document.getElementById("state-tax").value;
+
+	// 税 = 总价 * 税率
+	let tax = calculateSubtotal() * getSalesTaxRateForState(state);
+
+	return roundMoney(tax);
 }
 
 function getSalesTaxRateForState(state) {
-	return 0.00; // TODO getSalesTaxRateForState
+	return SALES_TAX[state];
 }
 
 document.getElementById("btn-what-is-my-sales-tax").addEventListener("click", () => {
@@ -83,4 +109,7 @@ document.getElementById("btn-sales-tax").addEventListener("click", () => {
 	alert("Your sales tax is: $" + calculateSalesTax().toFixed(2));
 });
 
-// TODO Add an event listener to btn-checkout
+document.getElementById("btn-checkout").addEventListener("click", () =>{
+	alert("Your total is: $" + (calculateSubtotal() + calculateSalesTax()).toFixed(2))});
+
+//
